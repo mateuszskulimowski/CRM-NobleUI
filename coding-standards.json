@@ -1,0 +1,86 @@
+{
+  "entityRelations": {
+    "component": {
+      "model": ["PROPERTY"],
+      "service": ["CONSTRUCTOR"],
+      "router": ["CONSTRUCTOR"],
+      "activatedRoute": ["CONSTRUCTOR"],
+      "viewModel": ["PROPERTY"]
+    },
+    "page": {
+      "model": ["PROPERTY"],
+      "service": ["CONSTRUCTOR"],
+      "router": ["CONSTRUCTOR"],
+      "activatedRoute": ["CONSTRUCTOR"]
+    },
+    "directive": {
+      "service": ["CONSTRUCTOR"],
+      "router": ["CONSTRUCTOR"]
+    },
+    "service": {
+      "httpClient": ["CONSTRUCTOR"],
+      "model": ["PARAMETER", "RETURN"]
+    }
+  },
+  "external": {
+    "httpClient": {
+      "type": "HttpClient",
+      "module": "@angular/common/http"
+    },
+    "router": {
+      "type": "Router",
+      "module": "@angular/router"
+    },
+    "activatedRoute": {
+      "type": "ActivatedRoute",
+      "module": "@angular/router"
+    }
+  },
+  "entities": {
+    "component": {
+      "type": "ANGULAR_COMPONENT",
+      "folder": "components/$name$",
+      "config": {
+        "stylesExtension": "none",
+        "viewEncapsulation": "None",
+        "selector": "generated",
+        "changeDetectionStrategy": "OnPush"
+      }
+    },
+    "page": {
+      "type": "ANGULAR_COMPONENT",
+      "folder": "pages/$name$",
+      "config": {
+        "stylesExtension": "none",
+        "viewEncapsulation": "None",
+        "selector": "generated",
+        "changeDetectionStrategy": "OnPush"
+      }
+    },
+    "directive": {
+      "type": "ANGULAR_DIRECTIVE",
+      "folder": "directives/$name$",
+      "id": "directive",
+      "suffix": "Directive"
+    },
+    "queryModel": {
+      "type": "DATA_STRUCTURE"
+    },
+    "service": {
+      "type": "ANGULAR_SERVICE"
+    },
+    "guard": {
+      "type": "ANGULAR_GUARD"
+    },
+    "pipe": {
+      "type": "ANGULAR_PIPE"
+    },
+    "model": {
+      "type": "DATA_STRUCTURE"
+    },
+    "viewModel": {
+      "type": "DATA_STRUCTURE",
+      "folder": "components/$name$"
+    }
+  }
+}
