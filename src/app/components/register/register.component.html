@@ -1,0 +1,92 @@
+<form
+  class="forms-sample"
+  [formGroup]="registerForm"
+  (submit)="onRegisterFormSubmitter(registerForm)"
+>
+  <div class="mb-3">
+    <label for="userPhone" class="form-label">Phone</label>
+    <input
+      type="text"
+      class="form-control"
+      id="userPhone"
+      autocomplete="Phone"
+      placeholder="Phone"
+      formControlName="phone"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="userPassword" class="form-label">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="userPassword"
+      placeholder="Password"
+      formControlName="password"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="userConfirmPassword" class="form-label">Confirm Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="userConfirmPassword"
+      autocomplete="current-password"
+      placeholder="Confirm Password"
+      formControlName="confirmPassword"
+    />
+  </div>
+  <div class="mb-3">
+    <p
+      *ngIf="
+        registerForm.get('phone')?.touched && registerForm.get('phone')?.invalid
+      "
+      class="alert alert-danger"
+    >
+      Phone number is invalid
+    </p>
+  </div>
+  <div class="mb-3">
+    <p
+      *ngIf="
+        registerForm.get('password')?.touched &&
+        registerForm.get('password')?.invalid
+      "
+      class="alert alert-danger"
+    >
+      Password is not strong enough
+    </p>
+  </div>
+  <div class="mb-3">
+    <p
+      *ngIf="
+        registerForm.get('confirmPassword')?.touched &&
+        registerForm.get('confirmPassword')?.invalid
+      "
+      class="alert alert-danger"
+    >
+      Confirm Password is invalid
+    </p>
+  </div>
+  <div class="form-check mb-3">
+    <input
+      type="checkbox"
+      class="form-check-input"
+      id="isAccept"
+      formControlName="isAccept"
+    />
+    <label class="form-check-label" for="isAccept">
+      I accept the <a href="/">terms</a> and <a href="/">privacy policy</a>
+    </label>
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-primary text-white me-2 mb-2 mb-md-0"
+    [disabled]="!registerForm.valid"
+  >
+    Sign up
+  </button>
+  <a [routerLink]="'/login'" class="d-block mt-3 text-muted"
+    >Already a user? Sign in</a
+  >
+</form>
