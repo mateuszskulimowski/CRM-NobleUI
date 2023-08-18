@@ -19,7 +19,7 @@
     },
     "service": {
       "httpClient": ["CONSTRUCTOR"],
-      "model": ["PARAMETER", "RETURN"]
+      "model": ["PARAMETER", "RETURN", "PROPERTY"]
     }
   },
   "external": {
@@ -76,6 +76,9 @@
       "type": "ANGULAR_PIPE"
     },
     "model": {
+      "type": "DATA_STRUCTURE"
+    },
+    "response": {
       "type": "DATA_STRUCTURE"
     },
     "viewModel": {

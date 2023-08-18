@@ -1,0 +1,59 @@
+<form
+  class="forms-sample"
+  [formGroup]="loginForm"
+  (submit)="onLoginFormSubmitted(loginForm)"
+>
+  <div class="mb-3">
+    <label for="userPhone" class="form-label">Phone</label>
+    <input
+      type="text"
+      class="form-control"
+      id="userPhone"
+      placeholder="Phone"
+      formControlName="phone"
+      data-testid="phone"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="userPassword" class="form-label">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="userPassword"
+      autocomplete="current-password"
+      placeholder="Password"
+      formControlName="password"
+      data-testid="password"
+    />
+  </div>
+  <div class="mb-3">
+    <p
+      *ngIf="loginForm.touched && loginForm.hasError('backendError')"
+      class="alert alert-danger"
+    >
+      Phone number or password is not valid
+    </p>
+  </div>
+  <div class="form-check mb-3">
+    <input
+      type="checkbox"
+      class="form-check-input"
+      id="authCheck"
+      formControlName="rememberMe"
+      data-testid="rememberMe"
+    />
+    <label class="form-check-label" for="authCheck"> Remember me </label>
+  </div>
+  <div>
+    <button
+      [disabled]="!loginForm.valid"
+      type="submitted"
+      class="btn btn-primary me-2 mb-2 mb-md-0 text-white"
+    >
+      Login
+    </button>
+  </div>
+  <a [routerLink]="'/register'" class="d-block mt-3 text-muted"
+    >Not a user? Sign up</a
+  >
+</form>

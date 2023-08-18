@@ -1,22 +1,83 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, map, tap } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
+import { LOCALSTORAGE, LocalStorage } from '../storages/local-storage';
 import { CredentialModel } from '../models/credential.model';
-import { ResponseModel } from '../models/response.model';
+import { LoginResponse } from '../responses/login.response';
+import { DataResponse } from '../responses/data.response';
 import { environment } from 'src/environments/environment';
-import { DataModel } from '../models/data.model';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
-  constructor(private _httpClient: HttpClient) {}
-
-  register(credential: CredentialModel): Observable<any> {
-    console.log(credential);
-    return this._httpClient.post(
-      `https://us-central1-courses-auth.cloudfunctions.net/phoneAuth/register`,
-      {
-        data: credential,
-      }
+  private _accessTokenSubject: BehaviorSubject<string | null> =
+    new BehaviorSubject<string | null>(
+      this._localStorage.getItem('accessToken')
     );
+  public accessToken$: Observable<string | null> =
+    this._accessTokenSubject.asObservable();
+  private _refreshTokenSubject: BehaviorSubject<string | null> =
+    new BehaviorSubject<string | null>(
+      this._localStorage.getItem('refreshToken')
+    );
+  public refreshToken$: Observable<string | null> =
+    this._refreshTokenSubject.asObservable();
+
+  constructor(
+    private _httpClient: HttpClient,
+    @Inject(LOCALSTORAGE) private _localStorage: LocalStorage
+  ) {}
+
+  register(credential: CredentialModel): Observable<void> {
+    // console.log(credential);
+    return this._httpClient
+      .post(`${environment.apiUrl}/phoneAuth/register`, {
+        data: credential,
+      })
+      .pipe(map(() => void 0));
+  }
+
+  login(
+    credential: CredentialModel,
+    rememberMe: boolean
+  ): Observable<LoginResponse> {
+    return this._httpClient
+      .post<DataResponse<LoginResponse>>(
+        `${environment.apiUrl}/phoneAuth/login`,
+        {
+          data: credential,
+        }
+      )
+      .pipe(
+        map((response) => ({
+          accessToken: response.data.accessToken,
+          refreshToken: response.data.refreshToken,
+        })),
+        tap((response) => this._logInUser(response, rememberMe))
+      );
+  }
+  refreshToken(refreshToken: string): Observable<LoginResponse> {
+    return this._httpClient
+      .post<DataResponse<LoginResponse>>(
+        `${environment.apiUrl}/phoneAuth/refresh`,
+        {
+          data: { refreshToken: refreshToken },
+        }
+      )
+      .pipe(
+        map((response) => ({
+          accessToken: response.data.accessToken,
+          refreshToken: response.data.refreshToken,
+        })),
+        tap((response) => this._logInUser(response, true))
+      );
+  }
+  private _logInUser(tokens: LoginResponse, rememberMe: boolean): void {
+    this._accessTokenSubject.next(tokens.accessToken);
+    this._refreshTokenSubject.next(tokens.refreshToken);
+    if (rememberMe) {
+      this._localStorage.setItem('accessToken', tokens.accessToken);
+      this._localStorage.setItem('refreshToken', tokens.refreshToken);
+    }
   }
 }

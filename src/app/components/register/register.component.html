@@ -12,6 +12,7 @@
       autocomplete="Phone"
       placeholder="Phone"
       formControlName="phone"
+      data-testid="phone"
     />
   </div>
   <div class="mb-3">
@@ -22,6 +23,7 @@
       id="userPassword"
       placeholder="Password"
       formControlName="password"
+      data-testid="password"
     />
   </div>
   <div class="mb-3">
@@ -33,19 +35,34 @@
       autocomplete="current-password"
       placeholder="Confirm Password"
       formControlName="confirmPassword"
+      data-testid="confirmPassword"
     />
   </div>
   <div class="mb-3">
     <p
       *ngIf="
-        registerForm.get('phone')?.touched && registerForm.get('phone')?.invalid
+        registerForm.get('phone')?.touched &&
+          registerForm.get('phone')?.invalid;
+        else password
       "
       class="alert alert-danger"
     >
       Phone number is invalid
     </p>
+    <ng-template #password>
+      <p
+        *ngIf="
+          registerForm.get('password')?.touched &&
+            registerForm.get('password')?.invalid;
+          else confirmPassword
+        "
+        class="alert alert-danger"
+      >
+        Password is not strong enough
+      </p></ng-template
+    >
   </div>
-  <div class="mb-3">
+  <!-- <div class="mb-3">
     <p
       *ngIf="
         registerForm.get('password')?.touched &&
@@ -55,8 +72,8 @@
     >
       Password is not strong enough
     </p>
-  </div>
-  <div class="mb-3">
+  </div> -->
+  <ng-template #confirmPassword>
     <p
       *ngIf="
         registerForm.get('confirmPassword')?.touched &&
@@ -66,13 +83,14 @@
     >
       Confirm Password is invalid
     </p>
-  </div>
+  </ng-template>
   <div class="form-check mb-3">
     <input
       type="checkbox"
       class="form-check-input"
       id="isAccept"
       formControlName="isAccept"
+      data-testid="termsAndPrivacyPolicy"
     />
     <label class="form-check-label" for="isAccept">
       I accept the <a href="/">terms</a> and <a href="/">privacy policy</a>
