@@ -4,7 +4,7 @@ import {
   Input,
   ViewEncapsulation,
 } from '@angular/core';
-import { AuthenticationLayoutViewModel } from './authentication-layout.view-model';
+import { AuthenticationLayoutViewModel } from '../../view-models/authentication-layout.view-model';
 
 @Component({
   selector: 'app-authentication-layout',

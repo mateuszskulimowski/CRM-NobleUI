@@ -3,7 +3,7 @@ import {
   Component,
   ViewEncapsulation,
 } from '@angular/core';
-import { AuthenticationLayoutViewModel } from 'src/app/components/authentication-layout/authentication-layout.view-model';
+import { AuthenticationLayoutViewModel } from 'src/app/view-models/authentication-layout.view-model';
 
 @Component({
   selector: 'app-register-page',

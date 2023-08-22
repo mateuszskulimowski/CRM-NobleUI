@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://us-central1-courses-auth.cloudfunctions.net',
+  apiUrl: 'https://us-central1-courses-auth.cloudfunctions.net/phoneAuth',
 };
 
 /*

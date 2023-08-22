@@ -5,7 +5,7 @@ import {
   HttpEvent,
   HttpInterceptor,
 } from '@angular/common/http';
-import { Observable, switchMap } from 'rxjs';
+import { Observable, switchMap, take, timeout } from 'rxjs';
 import { AuthenticationService } from '../services/authentication.service';
 
 @Injectable()
@@ -18,6 +18,7 @@ export class AuthorizationInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<unknown>> {
     return this._authenticationService.accessToken$.pipe(
       switchMap((accessToken) => {
+        // console.log(accessToken);
         request = request.clone({
           setHeaders: { Authorization: `Bearer ${accessToken}` },
         });

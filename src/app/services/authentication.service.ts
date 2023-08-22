@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map, take, tap } from 'rxjs/operators';
 import { LOCALSTORAGE, LocalStorage } from '../storages/local-storage';
 import { CredentialModel } from '../models/credential.model';
 import { LoginResponse } from '../responses/login.response';
@@ -31,7 +31,7 @@ export class AuthenticationService {
   register(credential: CredentialModel): Observable<void> {
     // console.log(credential);
     return this._httpClient
-      .post(`${environment.apiUrl}/phoneAuth/register`, {
+      .post(`${environment.apiUrl}/register`, {
         data: credential,
       })
       .pipe(map(() => void 0));
@@ -42,28 +42,26 @@ export class AuthenticationService {
     rememberMe: boolean
   ): Observable<LoginResponse> {
     return this._httpClient
-      .post<DataResponse<LoginResponse>>(
-        `${environment.apiUrl}/phoneAuth/login`,
-        {
-          data: credential,
-        }
-      )
+      .post<DataResponse<LoginResponse>>(`${environment.apiUrl}/login`, {
+        data: credential,
+      })
       .pipe(
+        take(1),
         map((response) => ({
           accessToken: response.data.accessToken,
           refreshToken: response.data.refreshToken,
         })),
-        tap((response) => this._logInUser(response, rememberMe))
+        tap((response) => {
+          console.log(response);
+          this._logInUser(response, rememberMe);
+        })
       );
   }
   refreshToken(refreshToken: string): Observable<LoginResponse> {
     return this._httpClient
-      .post<DataResponse<LoginResponse>>(
-        `${environment.apiUrl}/phoneAuth/refresh`,
-        {
-          data: { refreshToken: refreshToken },
-        }
-      )
+      .post<DataResponse<LoginResponse>>(`${environment.apiUrl}/refresh`, {
+        data: { refreshToken: refreshToken },
+      })
       .pipe(
         map((response) => ({
           accessToken: response.data.accessToken,
@@ -72,9 +70,28 @@ export class AuthenticationService {
         tap((response) => this._logInUser(response, true))
       );
   }
+  verifyPhone(code: number): Observable<void> {
+    return this._httpClient
+      .post(`${environment.apiUrl}/verify`, { data: { code: code } })
+      .pipe(map(() => void 0));
+  }
+  sendVerificationCode(): Observable<void> {
+    return this._httpClient
+      .post(`${environment}/send-verification-code`, undefined)
+      .pipe(map(() => void 0));
+  }
+
+  logOut(): void {
+    this._accessTokenSubject.next(null);
+    this._refreshTokenSubject.next(null);
+    this._localStorage.removeItem('accessToken');
+    this._localStorage.removeItem('refreshToken');
+  }
+
   private _logInUser(tokens: LoginResponse, rememberMe: boolean): void {
     this._accessTokenSubject.next(tokens.accessToken);
     this._refreshTokenSubject.next(tokens.refreshToken);
+
     if (rememberMe) {
       this._localStorage.setItem('accessToken', tokens.accessToken);
       this._localStorage.setItem('refreshToken', tokens.refreshToken);
