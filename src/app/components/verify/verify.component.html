@@ -1,0 +1,46 @@
+<div *ngIf="!(hasSentCode$ | async) as hasSent; else hasSentTemplate">
+  <button
+    (click)="sendVerificationCode()"
+    type="button"
+    class="btn btn-primary text-white me-2 mb-2 mb-md-0"
+  >
+    Send SMS
+  </button>
+</div>
+<ng-template #hasSentTemplate>
+  <form [formGroup]="verificationCodeForm">
+    {{ verificationCodeForm.getError("wrongCode") }}
+    <div
+      *ngIf="!verificationCodeForm.getError('wrongCode'); else resendTemplate"
+    >
+      <div class="mb-3">
+        <label for="veificationCode" class="form-label">Code</label>
+        <input
+          type="text"
+          class="form-control"
+          id="veirificationCode"
+          autocomplete="Code"
+          placeholder="Code"
+          formControlName="code"
+          data-testid="code"
+        />
+      </div>
+
+      <button
+        (click)="onVerificationCodeFormSubmitted(verificationCodeForm)"
+        class="btn btn-primary text-white me-2 mb-2 mb-md-0"
+      >
+        Verify
+      </button>
+    </div>
+    <ng-template #resendTemplate
+      ><p class="alert alert-danger">Code is invalid!</p>
+      <button
+        (click)="sendVerificationCode()"
+        class="btn btn-primary text-white me-2 mb-2 mb-md-0"
+      >
+        Resend SMS
+      </button></ng-template
+    >
+  </form>
+</ng-template>

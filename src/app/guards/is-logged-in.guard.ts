@@ -23,28 +23,43 @@ export class IsLoggedInGuard implements CanActivate {
     activatedRoute: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean | UrlTree> {
+    // return this._userService.getMe().pipe(
+    //   take(1),
+    //   catchError((error: HttpErrorResponse) => of('error')),
+    //   map((response) => {
+    //     console.log('isLoggedIn');
+    //     console.log(activatedRoute.routeConfig?.path);
+    //     // return this._userService.isVerifiedUser$.pipe(
+    //     //   map((isVerified) => {
+    //     return response === 'error'
+    //       ? this._router.parseUrl(
+    //           activatedRoute.data['redirectLoginUrl'] || '/login'
+    //         )
+    //       : true;
+
+    // return response === 'error' &&
+    //   activatedRoute.routeConfig?.path !== 'login' &&
+    //   activatedRoute.routeConfig?.path !== 'register'
+    //   ? this._router.parseUrl(
+    //       activatedRoute.data['redirectLoginUrl'] || '/login'
+    //     )
+    //   : response !== 'error'
+    //   ? true
+    //   : true;
+    //   })
+    // );
+    // })
+    // );
     return this._userService.getMe().pipe(
-      take(1),
       catchError((error: HttpErrorResponse) => of('error')),
-      switchMap((response) => {
-        console.log('isLoggedIn');
-        return this._userService.isVerifiedUser$.pipe(
-          map((isVerified) => {
-            return response === 'error'
-              ? activatedRoute.routeConfig?.path === 'login' ||
-                activatedRoute.routeConfig?.path === 'register'
-                ? true
-                : this._router.parseUrl(
-                    activatedRoute.data['redirectLoginUrl'] || '/login'
-                  )
-              : isVerified
-              ? this._router.parseUrl(
-                  activatedRoute.data['redirectUsersUrl'] || '/users'
-                )
-              : true;
-          })
-        );
-      })
+      map((response) =>
+        response === 'error'
+          ? this._router.parseUrl(
+              activatedRoute.data['redirectLoginUrl'] || '/login'
+            )
+          : true
+      )
     );
+    return of(true);
   }
 }

@@ -25,38 +25,61 @@ export class IsVerifiedGuard implements CanActivate {
     activatedRoute: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean | UrlTree> {
-    return this._userService.getMe().pipe(
-      take(1),
-      catchError((x) => {
-        console.log(x);
-        return of('error');
-      }),
-      switchMap((response) => {
-        console.log('isVerified');
-        return this._userService.isVerifiedUser$.pipe(
-          map((isVerified) => {
-            console.log('response', response);
-            // console.log('isVerified', isVerified);
-            return response === 'error'
-              ? activatedRoute.routeConfig?.path === 'register'
-                ? true
-                : this._router.parseUrl(
-                    activatedRoute.data['redirectLoginUrl'] || '/login'
-                  )
-              : isVerified
-              ? true
-              : this._router.parseUrl(
-                  activatedRoute.data['redirectVerifyUrl'] || '/verify'
-                );
+    return this._authenticationService.accessToken$.pipe(
+      switchMap((accessToken) => {
+        if (!accessToken) {
+          return of(true);
+        }
+        return this._userService.getMe().pipe(
+          map((response) => {
+            if (!response.isVerified) {
+              return this._router.parseUrl(
+                activatedRoute.data['redirectVerifyUrl'] || '/verify'
+              );
+            }
+            return true;
           })
         );
-        // return true;
-        // return response
-        //   ? true
-        //   : this._router.parseUrl(
-        //       activatedRoute.data['redirectVerifyUrl'] || '/verify'
-        //     );
       })
     );
+    // return this._userService.getMe().pipe(
+    //   take(1),
+    //   catchError((x) => {
+    //     console.log(x);
+    //     return of('error');
+    //   }),
+    //   switchMap((response) => {
+    //     console.log('isVerified');
+    //     return this._userService.isVerifiedUser$.pipe(
+    //       map((isVerified) => {
+    //         console.log('response', response);
+    //         console.log('isVerified', isVerified);
+    //         return isVerified
+    //           ? true
+    //           : this._router.parseUrl(
+    //               activatedRoute.data['redirectVerifyUrl'] || '/verify'
+    //             );
+    //         // return isVerified
+    //         //   ? true
+    //         //   : this._router.parseUrl(
+    //         //       activatedRoute.data['redirectVerifyUrl'] || '/verify'
+    //         //     );
+    //       })
+    //     );
+    //   })
+    // );
+
+    // this._userService.isVerifiedUser$.pipe(
+    //   map((isVerified) => {
+    //     console.log(!!activatedRoute.routeConfig?.path?.match('register'));
+    //     return isVerified
+    //       ? this._router.parseUrl(
+    //           activatedRoute.data['redirectUsers'] || '/users'
+    //         )
+    //       : true;
+    //   })
+    // )
+
+    return of(true);
   }
 }

@@ -6,15 +6,15 @@ import {
 import { AuthenticationLayoutViewModel } from 'src/app/view-models/authentication-layout.view-model';
 
 @Component({
-  selector: 'app-verify-page',
-  templateUrl: './verify.page.html',
+  selector: 'app-complete-account-page',
+  templateUrl: './complete-account.page.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class VerifyPage {
+export class CompleteAccountPage {
   readonly displayed: AuthenticationLayoutViewModel = {
     titleOne: 'Noble',
-    titleTwo: 'Invoices',
-    description: 'Verify your account.',
+    titleTwo: 'UI',
+    description: 'Complete the profile and add your home address.',
   };
 }

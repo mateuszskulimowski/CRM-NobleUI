@@ -12,25 +12,36 @@ import { IsLoggedInGuard } from './guards/is-logged-in.guard';
 import { IsLoggedInGuardModule } from './guards/is-logged-in.guard-module';
 import { IsVerifiedGuard } from './guards/is-verified.guard';
 import { IsVerifiedGuardModule } from './guards/is-verified.guard-module';
+import { CompleteAccountPage } from './pages/complete-account/complete-account.page';
+import { CompleteAccountPageModule } from './pages/complete-account/complete-account.page-module';
+import { ProfileCompletedGuard } from './guards/profile-completed.guard';
+import { ProfileCompletedGuardModule } from './guards/profile-completed.guard-module';
+import { AutoLoginGuard } from './guards/auto-login.guard';
+import { AutoLoginGuardModule } from './guards/auto-login.guard-module';
 
 const routes: Routes = [
   {
     path: 'register',
     component: RegisterPage,
-    canActivate: [IsVerifiedGuard, IsLoggedInGuard],
+    canActivate: [IsVerifiedGuard],
   },
-  { path: 'login', component: LoginPage, canActivate: [IsLoggedInGuard] },
+  { path: 'login', component: LoginPage },
   {
     path: 'verify',
     component: VerifyPage,
-    data: { redirectLoginUrl: '/login', redirectUsersUrl: '/users' },
-    canActivate: [IsLoggedInGuard],
+
+    canActivate: [IsLoggedInGuard, ProfileCompletedGuard],
   },
   {
     path: 'users',
     component: UsersPage,
-    data: { redirectLoginUrl: '/login', redirectVerifyUrl: '/verify' },
-    canActivate: [IsVerifiedGuard],
+
+    canActivate: [],
+  },
+  {
+    path: 'complete-account',
+    component: CompleteAccountPage,
+    canActivate: [IsLoggedInGuard, IsVerifiedGuard],
   },
 ];
 
@@ -43,6 +54,9 @@ const routes: Routes = [
     UsersPageModule,
     IsLoggedInGuardModule,
     IsVerifiedGuardModule,
+    CompleteAccountPageModule,
+    ProfileCompletedGuardModule,
+    AutoLoginGuardModule,
   ],
   exports: [RouterModule],
 })

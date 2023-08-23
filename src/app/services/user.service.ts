@@ -6,6 +6,7 @@ import { UserResponse } from '../responses/user.response';
 import { DataResponse } from '../responses/data.response';
 import { UserDataResponse } from '../responses/user-data.response';
 import { environment } from 'src/environments/environment';
+import { AddressModel } from '../models/address.model';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
@@ -13,6 +14,10 @@ export class UserService {
     new BehaviorSubject<boolean>(false);
   public isVerifiedUser$: Observable<boolean> =
     this._isVerifiedUserSubject.asObservable();
+  private _isCompletedSubject: BehaviorSubject<boolean> =
+    new BehaviorSubject<boolean>(false);
+  public isCompleted$: Observable<boolean> =
+    this._isCompletedSubject.asObservable();
 
   constructor(private _httpClient: HttpClient) {}
 
@@ -29,7 +34,16 @@ export class UserService {
           role: response.data.user.role,
           phone: response.data.user.phone,
         })),
-        tap((response) => this._isVerifiedUserSubject.next(response.isVerified))
+        tap((response) => {
+          this._isVerifiedUserSubject.next(response.isVerified);
+          this._isCompletedSubject.next(response.isCompleted);
+        })
       );
+  }
+
+  addAdress(aderess: AddressModel): Observable<void> {
+    return this._httpClient
+      .post(`${environment.apiUrl}/my-address`, { data: { aderess } })
+      .pipe(map(() => void 0));
   }
 }

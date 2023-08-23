@@ -1,0 +1,54 @@
+<form
+  [formGroup]="completeAccountForm"
+  (ngSubmit)="onCompleteAccountFormSubmitted(completeAccountForm)"
+>
+  <div class="mb-3">
+    <label for="street" class="form-label">Street</label>
+    <input
+      type="text"
+      class="form-control"
+      id="street"
+      formControlName="street"
+      data-testid="street"
+      placeholder="Street"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label for="houseNumber" class="form-label">House Number</label>
+    <input
+      type="text"
+      class="form-control"
+      id="houseNumber"
+      formControlName="houseNumber"
+      data-testid="houseNumber"
+      placeholder="House Number"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label for="zipCode" class="form-label">ZIP Code</label>
+    <input
+      type="text"
+      class="form-control"
+      formControlName="zipCode"
+      data-testid="zipCode"
+      placeholder="Zip Code"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label for="city" class="form-label">City</label>
+    <input
+      type="text"
+      class="form-control"
+      formControlName="city"
+      data-testid="city"
+      placeholder="City"
+      required
+    />
+  </div>
+  <button type="submitted" class="btn btn-primary me-2 mb-2 mb-md-0 text-white">
+    Login
+  </button>
+</form>

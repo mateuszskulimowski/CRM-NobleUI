@@ -8,14 +8,10 @@ import {
 } from '@angular/common/http';
 import { Observable, catchError, switchMap, throwError } from 'rxjs';
 import { AuthenticationService } from '../services/authentication.service';
-import { LOCALSTORAGE, LocalStorage } from '../storages/local-storage';
 
 @Injectable()
 export class RefreshTokenInterceptor implements HttpInterceptor {
-  constructor(
-    private _authenticationService: AuthenticationService,
-    @Inject(LOCALSTORAGE) private _localStorage: LocalStorage
-  ) {}
+  constructor(private _authenticationService: AuthenticationService) {}
 
   intercept(
     request: HttpRequest<unknown>,

@@ -22,6 +22,10 @@ export class AuthenticationService {
     );
   public refreshToken$: Observable<string | null> =
     this._refreshTokenSubject.asObservable();
+  private _hasSentCodeSubject: BehaviorSubject<boolean> =
+    new BehaviorSubject<boolean>(false);
+  public hasSentCode$: Observable<boolean> =
+    this._hasSentCodeSubject.asObservable();
 
   constructor(
     private _httpClient: HttpClient,
@@ -77,8 +81,13 @@ export class AuthenticationService {
   }
   sendVerificationCode(): Observable<void> {
     return this._httpClient
-      .post(`${environment}/send-verification-code`, undefined)
-      .pipe(map(() => void 0));
+      .post(`${environment.apiUrl}/send-verification-code`, undefined)
+      .pipe(
+        map(() => {
+          this._hasSentCodeSubject.next(true);
+          return void 0;
+        })
+      );
   }
 
   logOut(): void {
