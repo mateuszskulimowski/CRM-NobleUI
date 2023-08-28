@@ -7,20 +7,26 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LOCALSTORAGE } from './storages/local-storage';
 import { AuthorizationInterceptor } from './interceptors/authorization.interceptor';
 import { RefreshTokenInterceptor } from './interceptors/refresh-token.interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+  ],
   providers: [
     { provide: LOCALSTORAGE, useValue: localStorage },
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: AuthorizationInterceptor,
+      useClass: RefreshTokenInterceptor,
       multi: true,
     },
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: RefreshTokenInterceptor,
+      useClass: AuthorizationInterceptor,
       multi: true,
     },
   ],

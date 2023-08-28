@@ -16,32 +16,56 @@ import { CompleteAccountPage } from './pages/complete-account/complete-account.p
 import { CompleteAccountPageModule } from './pages/complete-account/complete-account.page-module';
 import { ProfileCompletedGuard } from './guards/profile-completed.guard';
 import { ProfileCompletedGuardModule } from './guards/profile-completed.guard-module';
-import { AutoLoginGuard } from './guards/auto-login.guard';
-import { AutoLoginGuardModule } from './guards/auto-login.guard-module';
+import { HomePage } from './pages/home/home.page';
+import { HomePageModule } from './pages/home/home.page-module';
 
 const routes: Routes = [
   {
     path: 'register',
     component: RegisterPage,
-    canActivate: [IsVerifiedGuard],
+    data: {
+      redirectVerifyUrl: '/verify',
+      redirectUsersUrl: '/users',
+      redirectCompleteAccountUrl: '/complete-account',
+    },
+    canActivate: [IsVerifiedGuard, ProfileCompletedGuard],
   },
   { path: 'login', component: LoginPage },
   {
     path: 'verify',
     component: VerifyPage,
-
+    data: {
+      redirectLoginUrl: '/login',
+      redirectCompleteAccountUrl: '/complete-account',
+    },
     canActivate: [IsLoggedInGuard, ProfileCompletedGuard],
   },
   {
     path: 'users',
     component: UsersPage,
-
-    canActivate: [],
+    data: { redirectLoginUrl: '/login' },
+    canActivate: [IsLoggedInGuard],
   },
   {
     path: 'complete-account',
     component: CompleteAccountPage,
+    data: {
+      redirectLoginUrl: '/login',
+      redirectVerifyUrl: '/verify',
+      redirectUsersUrl: '/users',
+    },
     canActivate: [IsLoggedInGuard, IsVerifiedGuard],
+  },
+  {
+    path: '',
+    component: HomePage,
+    data: {
+      redirectLoginUrl: '/login',
+      redirectVerifyUrl: '/verify',
+      redirectUsersUrl: '/users',
+      redirectCompleteAccountUrl: '/complete-account',
+    },
+    canActivate: [IsLoggedInGuard, IsVerifiedGuard, ProfileCompletedGuard],
   },
 ];
 
@@ -56,7 +80,7 @@ const routes: Routes = [
     IsVerifiedGuardModule,
     CompleteAccountPageModule,
     ProfileCompletedGuardModule,
-    AutoLoginGuardModule,
+    HomePageModule,
   ],
   exports: [RouterModule],
 })

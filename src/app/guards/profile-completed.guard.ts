@@ -19,43 +19,29 @@ export class ProfileCompletedGuard implements CanActivate {
   ) {}
 
   canActivate(
-    activatedRoute: ActivatedRouteSnapshot,
+    route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean | UrlTree> {
     return this._authenticationService.accessToken$.pipe(
       switchMap((accessToken) => {
+        if (!accessToken) {
+          return of(true);
+        }
         return this._userService.getMe().pipe(
           map((response) => {
-            console.log(response);
             if (response.isVerified) {
+              if (response.isCompleted) {
+                return this._router.parseUrl(route.data['redirectUsersUrl']);
+              }
               return this._router.parseUrl(
-                activatedRoute.data['redirectCompleteAccount'] ||
-                  '/complete-account'
+                route.data['redirectCompleteAccountUrl']
               );
             }
-            // return response.isVerified?;
+
             return true;
           })
         );
       })
-    ); // return this._userService.getMe().pipe(
-    //   catchError(() => of('error')),
-    //   switchMap((response) =>
-    //     this._userService.isCompleted$.pipe(
-    //       map((isCompleted) => {
-    //         console.log(isCompleted);
-    //         return response !== 'error'
-    //           ? isCompleted
-    //             ? true
-    //             : this._router.parseUrl(
-    //                 activatedRoute.data['redirectCompleteAccountUrl'] ||
-    //                   '/complete-account'
-    //               )
-    //           : this._router.parseUrl('/login');
-    //       })
-    //     )
-    //   )
-    // );
-    return of(true);
+    );
   }
 }

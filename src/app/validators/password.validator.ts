@@ -6,7 +6,6 @@ export const passwordValidator: ValidatorFn = (
   const value = control.value;
   const errors: Record<string, boolean> = {};
 
-  //   console.log(value.match(/_/));
   if (!value.match(/(?=.*[a-z].*[a-z]){2}/)) {
     errors['smallCharacter'] = true;
   }

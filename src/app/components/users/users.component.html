@@ -1,1 +1,66 @@
-<button (click)="logOut()">logout</button>
+<div class="page-content p-5 pt-7">
+  <div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+      <div class="card">
+        <ng-container *ngIf="me$ | async as user">
+          <div class="card-body align-items-center">
+            <div
+              class="d-flex justify-content-between align-items-baseline mb-4 mb-md-3"
+            >
+              <h3
+                *ngIf="user.role === 'admin'; else noAdmin"
+                class="fw-bolder mb-5 mt-4"
+              >
+                Hello Admin
+              </h3>
+
+              <ng-template #noAdmin>
+                <h3 class="fw-bolder mb-5 mt-4">Hello User</h3></ng-template
+              >
+            </div>
+          </div>
+
+          <div
+            *ngIf="user.role === 'admin'"
+            class="col d-flex justify-content-center"
+          >
+            <div class="table-responsive pt-3">
+              <table class="table table-bordered">
+                <thead>
+                  <tr class="text-center">
+                    <th>#</th>
+                    <th>PHONE</th>
+                    <th>STATUS</th>
+                    <th>ACTION</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let user of users$ | async">
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.phone }}</td>
+                    <td
+                      [ngClass]="
+                        user.isVerified ? 'text-success' : 'text-danger'
+                      "
+                    >
+                      {{ user.isVerified | isActiveUser }}
+                    </td>
+                    <td>
+                      <button
+                        (click)="removeUser(user.id)"
+                        type="button"
+                        class="btn btn-primary me-2 mb-2 mb-md-0 text-white"
+                      >
+                        Remove
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import {
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   ViewEncapsulation,
 } from '@angular/core';
@@ -23,7 +24,8 @@ export class VerifyComponent {
 
   constructor(
     private _authenticationService: AuthenticationService,
-    private _router: Router
+    private _router: Router,
+    private _cdr: ChangeDetectorRef
   ) {}
 
   sendVerificationCode(): void {
@@ -36,10 +38,12 @@ export class VerifyComponent {
       .verifyPhone(verificationCodeForm.get('code')?.value)
       .subscribe({
         next: () => {
+          location.reload();
           this._router.navigate(['/complete-account']);
         },
         error: () => {
           verificationCodeForm.setErrors({ wrongCode: true });
+          this._cdr.detectChanges();
         },
       });
   }

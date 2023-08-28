@@ -17,12 +17,4 @@ export const confirmPasswordValidator: ValidatorFn = (
   confirmPassword?.setErrors(null);
 
   return null;
-
-  // if (control.get('phone')?.touched) {
-  //   console.log('phone dotkniety');
-  //   if (!control.get('phone')?.value.match(/\+48\d{9}/)) {
-
-  //   }
-  // }
-  // return null;
 };

@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { map, take, tap } from 'rxjs/operators';
+import { map, switchMap, take, tap } from 'rxjs/operators';
 import { LOCALSTORAGE, LocalStorage } from '../storages/local-storage';
 import { CredentialModel } from '../models/credential.model';
 import { LoginResponse } from '../responses/login.response';
@@ -33,7 +33,6 @@ export class AuthenticationService {
   ) {}
 
   register(credential: CredentialModel): Observable<void> {
-    // console.log(credential);
     return this._httpClient
       .post(`${environment.apiUrl}/register`, {
         data: credential,
@@ -51,12 +50,26 @@ export class AuthenticationService {
       })
       .pipe(
         take(1),
-        map((response) => ({
-          accessToken: response.data.accessToken,
-          refreshToken: response.data.refreshToken,
-        })),
+        switchMap((response) =>
+          this.accessToken$.pipe(
+            take(1),
+            map((accessToken) => {
+              if (accessToken) {
+                this.logOut();
+                return {
+                  accessToken: response.data.accessToken,
+                  refreshToken: response.data.refreshToken,
+                };
+              }
+              return {
+                accessToken: response.data.accessToken,
+                refreshToken: response.data.refreshToken,
+              };
+            })
+          )
+        ),
+
         tap((response) => {
-          console.log(response);
           this._logInUser(response, rememberMe);
         })
       );
@@ -67,11 +80,15 @@ export class AuthenticationService {
         data: { refreshToken: refreshToken },
       })
       .pipe(
-        map((response) => ({
-          accessToken: response.data.accessToken,
-          refreshToken: response.data.refreshToken,
-        })),
-        tap((response) => this._logInUser(response, true))
+        map((response) => {
+          return {
+            accessToken: response.data.accessToken,
+            refreshToken: response.data.refreshToken,
+          };
+        }),
+        tap((response) => {
+          this._logInUser(response, true);
+        })
       );
   }
   verifyPhone(code: number): Observable<void> {

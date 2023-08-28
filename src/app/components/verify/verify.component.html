@@ -9,7 +9,6 @@
 </div>
 <ng-template #hasSentTemplate>
   <form [formGroup]="verificationCodeForm">
-    {{ verificationCodeForm.getError("wrongCode") }}
     <div
       *ngIf="!verificationCodeForm.getError('wrongCode'); else resendTemplate"
     >
