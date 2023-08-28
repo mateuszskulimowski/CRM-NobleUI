@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import {
   HttpRequest,
   HttpHandler,
@@ -23,7 +23,7 @@ export class RefreshTokenInterceptor implements HttpInterceptor {
           return this._authenticationService.refreshToken$.pipe(
             switchMap((refreshToken) => {
               if (refreshToken) {
-                this._authenticationService
+                return this._authenticationService
                   .refreshToken(refreshToken as string)
                   .pipe(
                     switchMap((response) => {

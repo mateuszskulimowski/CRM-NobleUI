@@ -5,7 +5,14 @@ import {
   HttpEvent,
   HttpInterceptor,
 } from '@angular/common/http';
-import { Observable, switchMap, take, timeout } from 'rxjs';
+import {
+  Observable,
+  catchError,
+  shareReplay,
+  switchMap,
+  take,
+  timeout,
+} from 'rxjs';
 import { AuthenticationService } from '../services/authentication.service';
 
 @Injectable()
@@ -16,9 +23,12 @@ export class AuthorizationInterceptor implements HttpInterceptor {
     request: HttpRequest<unknown>,
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
+    const blacListUrl = ['/login', '/register'];
+    if (blacListUrl.find((blackUrl) => request.url.includes(blackUrl))) {
+      return next.handle(request);
+    }
     return this._authenticationService.accessToken$.pipe(
       switchMap((accessToken) => {
-        // console.log(accessToken);
         request = request.clone({
           setHeaders: { Authorization: `Bearer ${accessToken}` },
         });
