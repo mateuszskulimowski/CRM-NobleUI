@@ -16,12 +16,14 @@ export class AuthenticationService {
     );
   public accessToken$: Observable<string | null> =
     this._accessTokenSubject.asObservable();
+
   private _refreshTokenSubject: BehaviorSubject<string | null> =
     new BehaviorSubject<string | null>(
       this._localStorage.getItem('refreshToken')
     );
   public refreshToken$: Observable<string | null> =
     this._refreshTokenSubject.asObservable();
+
   private _hasSentCodeSubject: BehaviorSubject<boolean> =
     new BehaviorSubject<boolean>(false);
   public hasSentCode$: Observable<boolean> =
