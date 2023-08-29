@@ -5,7 +5,6 @@ import { IsLoggedInGuard } from './is-logged-in.guard';
   imports: [],
   declarations: [],
   providers: [IsLoggedInGuard],
-  exports: []
+  exports: [],
 })
-export class IsLoggedInGuardModule {
-}
+export class IsLoggedInGuardModule {}

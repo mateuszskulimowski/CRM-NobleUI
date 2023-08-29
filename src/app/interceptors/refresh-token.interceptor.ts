@@ -23,24 +23,23 @@ export class RefreshTokenInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<unknown>> {
     const refreshToken = this._localStorage.getItem('refreshToken');
     const blacListUrl = ['/login', '/register'];
+
     if (blacListUrl.find((blackUrl) => request.url.includes(blackUrl))) {
       return next.handle(request);
     }
     return next.handle(request).pipe(
       catchError((error: HttpErrorResponse) => {
-        if (error.status === 401) {
-          return this._authenticationService
-            .refreshToken(refreshToken as string)
-            .pipe(
-              switchMap((response) => {
-                request = request.clone({
-                  setHeaders: {
-                    Authorization: `Bearer ${response.accessToken}`,
-                  },
-                });
-                return next.handle(request);
-              })
-            );
+        if (error.status === 401 && refreshToken) {
+          return this._authenticationService.refreshToken(refreshToken).pipe(
+            switchMap((response) => {
+              request = request.clone({
+                setHeaders: {
+                  Authorization: `Bearer ${response.accessToken}`,
+                },
+              });
+              return next.handle(request);
+            })
+          );
         }
         return throwError(() => error);
       })

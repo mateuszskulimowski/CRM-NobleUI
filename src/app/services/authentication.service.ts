@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { map, switchMap, take, tap } from 'rxjs/operators';
 import { LOCALSTORAGE, LocalStorage } from '../storages/local-storage';
 import { CredentialModel } from '../models/credential.model';
@@ -10,19 +10,12 @@ import { environment } from 'src/environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
-  private _accessTokenSubject: BehaviorSubject<string | null> =
-    new BehaviorSubject<string | null>(
-      this._localStorage.getItem('accessToken')
+  private _accessTokenSubject: BehaviorSubject<string> =
+    new BehaviorSubject<string>(
+      this._localStorage.getItem('accessToken') || ''
     );
   public accessToken$: Observable<string | null> =
     this._accessTokenSubject.asObservable();
-
-  private _refreshTokenSubject: BehaviorSubject<string | null> =
-    new BehaviorSubject<string | null>(
-      this._localStorage.getItem('refreshToken')
-    );
-  public refreshToken$: Observable<string | null> =
-    this._refreshTokenSubject.asObservable();
 
   private _hasSentCodeSubject: BehaviorSubject<boolean> =
     new BehaviorSubject<boolean>(false);
@@ -77,6 +70,9 @@ export class AuthenticationService {
       );
   }
   refreshToken(refreshToken: string): Observable<LoginResponse> {
+    if (refreshToken === null) {
+      return of();
+    }
     return this._httpClient
       .post<DataResponse<LoginResponse>>(`${environment.apiUrl}/refresh`, {
         data: { refreshToken: refreshToken },
@@ -110,16 +106,13 @@ export class AuthenticationService {
   }
 
   logOut(): void {
-    this._accessTokenSubject.next(null);
-    this._refreshTokenSubject.next(null);
+    this._accessTokenSubject.next('');
     this._localStorage.removeItem('accessToken');
     this._localStorage.removeItem('refreshToken');
   }
 
   private _logInUser(tokens: LoginResponse, rememberMe: boolean): void {
     this._accessTokenSubject.next(tokens.accessToken);
-    this._refreshTokenSubject.next(tokens.refreshToken);
-
     if (rememberMe) {
       this._localStorage.setItem('accessToken', tokens.accessToken);
       this._localStorage.setItem('refreshToken', tokens.refreshToken);
