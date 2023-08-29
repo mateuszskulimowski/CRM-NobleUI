@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable, from, of } from 'rxjs';
 import { map, shareReplay, switchMap, tap } from 'rxjs/operators';
 import { UserResponse } from '../responses/user.response';
 import { DataResponse } from '../responses/data.response';
@@ -11,25 +11,15 @@ import { UserModel } from '../models/user.model';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
-  private _isVerifiedUserSubject = new BehaviorSubject<boolean>(false);
-  private _isCompletedSubject = new BehaviorSubject<boolean>(false);
-
   constructor(private _httpClient: HttpClient) {}
   private _me$: Observable<UserResponse> = this._httpClient
     .get<DataResponse<UserDataResponse<UserResponse>>>(
       `${environment.apiUrl}/me`
     )
-    .pipe(
-      map((response) => response.data.user),
-      tap((response) => {
-        this._isCompletedSubject.next(response.isCompleted);
-        this._isVerifiedUserSubject.next(response.isVerified);
-      })
-    );
+    .pipe(map((response) => response.data.user));
+
   getMe(): Observable<UserResponse> {
-    return this._me$.pipe(
-      switchMap((response) => of(response).pipe(shareReplay(1)))
-    );
+    return this._me$;
   }
 
   addAdress(aderess: AddressModel): Observable<void> {

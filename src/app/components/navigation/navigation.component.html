@@ -1,11 +1,11 @@
-<nav class="sidebar">
+<nav class="sidebar" data-testid="sidebar">
   <div class="sidebar-header">
     <a href="#" class="sidebar-brand"> Noble<span>UI</span> </a>
   </div>
 </nav>
 
 <div class="page-wrapper">
-  <nav class="navbar">
+  <nav class="navbar" data-testid="navbar">
     <div class="navbar-content">
       <div class="navbar-nav">
         <div class="nav-item dropdown" (click)="logOut()">
@@ -44,6 +44,7 @@
         stroke-linecap="round"
         stroke-linejoin="round"
         class="feather feather-heart mb-1 text-primary ms-1 icon-sm"
+        data-testid="footer"
       >
         <path
           d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
