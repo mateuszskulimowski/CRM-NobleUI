@@ -1,14 +1,16 @@
-<div *ngIf="!(hasSentCode$ | async) as hasSent; else hasSentTemplate">
-  <button
-    (click)="sendVerificationCode()"
-    type="button"
-    class="btn btn-primary text-white me-2 mb-2 mb-md-0"
+<form [formGroup]="verificationCodeForm">
+  <ng-container
+    *ngIf="!(hasSentCode$ | async) as hasSent; else hasSentTemplate"
   >
-    Send SMS
-  </button>
-</div>
-<ng-template #hasSentTemplate>
-  <form [formGroup]="verificationCodeForm">
+    <button
+      (click)="sendVerificationCode()"
+      class="btn btn-primary text-white me-2 mb-2 mb-md-0"
+    >
+      Send SMS
+    </button></ng-container
+  >
+  <div></div>
+  <ng-template #hasSentTemplate>
     <div
       *ngIf="!verificationCodeForm.getError('wrongCode'); else resendTemplate"
     >
@@ -28,6 +30,7 @@
       <button
         (click)="onVerificationCodeFormSubmitted(verificationCodeForm)"
         class="btn btn-primary text-white me-2 mb-2 mb-md-0"
+        [disabled]="!verificationCodeForm.valid"
       >
         Verify
       </button>
@@ -41,5 +44,5 @@
         Resend SMS
       </button></ng-template
     >
-  </form>
-</ng-template>
+  </ng-template>
+</form>

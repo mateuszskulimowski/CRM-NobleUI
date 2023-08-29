@@ -48,7 +48,11 @@
       required
     />
   </div>
-  <button type="submitted" class="btn btn-primary me-2 mb-2 mb-md-0 text-white">
+  <button
+    type="submitted"
+    class="btn btn-primary me-2 mb-2 mb-md-0 text-white"
+    [disabled]="!completeAccountForm.valid"
+  >
     Send
   </button>
 </form>
