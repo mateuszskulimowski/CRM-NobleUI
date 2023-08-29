@@ -1,6 +1,6 @@
 <nav class="sidebar" data-testid="sidebar">
   <div class="sidebar-header">
-    <a href="#" class="sidebar-brand"> Noble<span>UI</span> </a>
+    <a [routerLink]="'/'" class="sidebar-brand"> Noble<span>UI</span> </a>
   </div>
 </nav>
 
@@ -9,10 +9,7 @@
     <div class="navbar-content">
       <div class="navbar-nav">
         <div class="nav-item dropdown" (click)="logOut()">
-          <a
-            href="javascript:;"
-            class="text-body ms-0 d-flex align-items-center"
-          >
+          <a class="text-body ms-0 d-flex align-items-center pointer">
             <span class="material-icons fs-6 me-2">logout</span>
             <span>Log Out</span>
           </a>

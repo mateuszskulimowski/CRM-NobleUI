@@ -1,8 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  ViewEncapsulation,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
@@ -21,7 +17,7 @@ export class CompleteAccountComponent {
     city: new FormControl('', [Validators.required]),
   });
 
-  constructor(private _userService: UserService, private _router: Router) {}
+  constructor(private _userService: UserService, private _router: Router) { }
 
   onCompleteAccountFormSubmitted(completeAccountForm: FormGroup): void {
     this._userService

@@ -27,9 +27,6 @@ export class UserService {
       .post(`${environment.apiUrl}/my-address`, { data: { aderess } })
       .pipe(map(() => void 0));
   }
-  hasRoleAdmin(role: string): Observable<boolean> {
-    return of(role === 'admin');
-  }
 
   getUsers(): Observable<UserModel[]> {
     return this._httpClient

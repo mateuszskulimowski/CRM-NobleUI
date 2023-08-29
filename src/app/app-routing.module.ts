@@ -67,6 +67,17 @@ const routes: Routes = [
     },
     canActivate: [IsLoggedInGuard, IsVerifiedGuard, ProfileCompletedGuard],
   },
+  {
+    path: '**',
+    component: HomePage,
+    data: {
+      redirectLoginUrl: '/login',
+      redirectVerifyUrl: '/verify',
+      redirectUsersUrl: '/users',
+      redirectCompleteAccountUrl: '/complete-account',
+    },
+    canActivate: [IsLoggedInGuard, IsVerifiedGuard, ProfileCompletedGuard],
+  },
 ];
 
 @NgModule({

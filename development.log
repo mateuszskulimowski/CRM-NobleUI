@@ -1,0 +1,3706 @@
+[info] [CLI] Calling Query entity/create/flow: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/register/register.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/create/flow"
+}
+[info] [CLI] Called Query entity/create/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "entity",
+				"title": "What do you want to create?",
+				"type": "multi-option",
+				"options": [
+					{
+						"id": "component",
+						"suffix": "Component",
+						"folder": "components/$name$",
+						"type": "ANGULAR_COMPONENT",
+						"insideOf": "App",
+						"config": {
+							"stylesExtension": "none",
+							"viewEncapsulation": "None",
+							"selector": "generated",
+							"changeDetectionStrategy": "OnPush"
+						}
+					},
+					{
+						"id": "page",
+						"suffix": "Page",
+						"folder": "pages/$name$",
+						"type": "ANGULAR_COMPONENT",
+						"insideOf": "App",
+						"config": {
+							"stylesExtension": "none",
+							"viewEncapsulation": "None",
+							"selector": "generated",
+							"changeDetectionStrategy": "OnPush"
+						}
+					},
+					{
+						"id": "directive",
+						"suffix": "Directive",
+						"folder": "directives/$name$",
+						"type": "ANGULAR_DIRECTIVE",
+						"insideOf": "App"
+					},
+					{
+						"id": "queryModel",
+						"suffix": "QueryModel",
+						"folder": "query-models",
+						"type": "DATA_STRUCTURE",
+						"insideOf": "App"
+					},
+					{
+						"id": "service",
+						"suffix": "Service",
+						"folder": "services",
+						"type": "ANGULAR_SERVICE",
+						"insideOf": "App",
+						"config": {
+							"provideStrategy": "root"
+						}
+					},
+					{
+						"id": "guard",
+						"suffix": "Guard",
+						"folder": "guards",
+						"type": "ANGULAR_GUARD",
+						"insideOf": "App",
+						"config": {
+							"provideStrategy": "root"
+						}
+					},
+					{
+						"id": "pipe",
+						"suffix": "Pipe",
+						"folder": "pipes",
+						"type": "ANGULAR_PIPE",
+						"insideOf": "App"
+					},
+					{
+						"id": "model",
+						"suffix": "Model",
+						"folder": "models",
+						"type": "DATA_STRUCTURE",
+						"insideOf": "App"
+					},
+					{
+						"id": "response",
+						"suffix": "Response",
+						"folder": "responses",
+						"type": "DATA_STRUCTURE",
+						"insideOf": "App"
+					},
+					{
+						"id": "viewModel",
+						"suffix": "ViewModel",
+						"folder": "components/$name$",
+						"type": "DATA_STRUCTURE",
+						"insideOf": "App"
+					}
+				],
+				"extraOptions": [],
+				"property": "id",
+				"canBeEmpty": false
+			}
+		],
+		"request": {}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/create/flow"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/register/register.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "RegisterComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-layout/flow: {
+	"funcParams": {
+		"actionId": "ADD_LAYOUT_TEMPLATE",
+		"label": "Display Layout",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-layout/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-layout/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "layout",
+				"title": "Which layout to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "add-button",
+						"contextVariables": []
+					},
+					{
+						"label": "edit-button",
+						"contextVariables": []
+					},
+					{
+						"label": "remove-button",
+						"contextVariables": []
+					},
+					{
+						"label": "card",
+						"contextVariables": []
+					},
+					{
+						"label": "toolbar",
+						"contextVariables": []
+					},
+					{
+						"label": "two-columns-grid",
+						"contextVariables": []
+					},
+					{
+						"label": "stepper",
+						"contextVariables": []
+					},
+					{
+						"label": "tabs",
+						"contextVariables": []
+					},
+					{
+						"label": "layouts",
+						"contextVariables": []
+					},
+					{
+						"label": "table",
+						"contextVariables": []
+					},
+					{
+						"label": "spinner",
+						"contextVariables": []
+					},
+					{
+						"label": "progress-bar",
+						"contextVariables": []
+					},
+					{
+						"label": "simple-no-data-template",
+						"contextVariables": []
+					},
+					{
+						"label": "image-no-data-template",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-layout",
+				"payload": {
+					"layoutTemplate": "layout.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/register/register.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "RegisterComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-layout/flow: {
+	"funcParams": {
+		"actionId": "ADD_LAYOUT_TEMPLATE",
+		"label": "Display Layout",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-layout/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-layout/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "layout",
+				"title": "Which layout to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "add-button",
+						"contextVariables": []
+					},
+					{
+						"label": "edit-button",
+						"contextVariables": []
+					},
+					{
+						"label": "remove-button",
+						"contextVariables": []
+					},
+					{
+						"label": "card",
+						"contextVariables": []
+					},
+					{
+						"label": "toolbar",
+						"contextVariables": []
+					},
+					{
+						"label": "two-columns-grid",
+						"contextVariables": []
+					},
+					{
+						"label": "stepper",
+						"contextVariables": []
+					},
+					{
+						"label": "tabs",
+						"contextVariables": []
+					},
+					{
+						"label": "layouts",
+						"contextVariables": []
+					},
+					{
+						"label": "table",
+						"contextVariables": []
+					},
+					{
+						"label": "spinner",
+						"contextVariables": []
+					},
+					{
+						"label": "progress-bar",
+						"contextVariables": []
+					},
+					{
+						"label": "simple-no-data-template",
+						"contextVariables": []
+					},
+					{
+						"label": "image-no-data-template",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-layout",
+				"payload": {
+					"layoutTemplate": "layout.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "AuthenticationLayoutComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-layout/flow: {
+	"funcParams": {
+		"actionId": "ADD_LAYOUT_TEMPLATE",
+		"label": "Display Layout",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-layout/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-layout/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "layout",
+				"title": "Which layout to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "authentication-layout",
+						"contextVariables": []
+					},
+					{
+						"label": "add-button",
+						"contextVariables": []
+					},
+					{
+						"label": "edit-button",
+						"contextVariables": []
+					},
+					{
+						"label": "remove-button",
+						"contextVariables": []
+					},
+					{
+						"label": "card",
+						"contextVariables": []
+					},
+					{
+						"label": "toolbar",
+						"contextVariables": []
+					},
+					{
+						"label": "two-columns-grid",
+						"contextVariables": []
+					},
+					{
+						"label": "stepper",
+						"contextVariables": []
+					},
+					{
+						"label": "tabs",
+						"contextVariables": []
+					},
+					{
+						"label": "layouts",
+						"contextVariables": []
+					},
+					{
+						"label": "table",
+						"contextVariables": []
+					},
+					{
+						"label": "spinner",
+						"contextVariables": []
+					},
+					{
+						"label": "progress-bar",
+						"contextVariables": []
+					},
+					{
+						"label": "simple-no-data-template",
+						"contextVariables": []
+					},
+					{
+						"label": "image-no-data-template",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-layout",
+				"payload": {
+					"layoutTemplate": "layout.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Calling Command angular-component/templates/add-layout: {
+	"funcParams": {
+		"layoutTemplate": "authentication-layout"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/templates/add-layout"
+}
+[info] [CommandBus]: Dispatching command AddLayoutToTemplateCommand: {
+	"commandName": "AddLayoutToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component.html",
+		"className": "AuthenticationLayoutComponent",
+		"position": 1017,
+		"layoutTemplate": "authentication-layout"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command AddLayoutToTemplateCommand"
+}
+[info] [EventBus]: Broadcasting event TemplateAddedEvent: {
+	"type": "TemplateAddedEvent",
+	"payload": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event TemplateAddedEvent"
+}
+[info] [EventBus]: Broadcasted TemplateAddedEvent: {
+	"event": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted TemplateAddedEvent"
+}
+[info] [CommandBus]: Handled  AddLayoutToTemplateCommand: {
+	"commandName": "AddLayoutToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component.html",
+		"className": "AuthenticationLayoutComponent",
+		"position": 1017,
+		"layoutTemplate": "authentication-layout"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  AddLayoutToTemplateCommand"
+}
+[info] [CLI] Called Command angular-component/templates/add-layout: {
+	"message": "[CLI] Called Command angular-component/templates/add-layout",
+	"level": "info"
+}
+[info] [CommandBus]: Dispatching command ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ImportTemplateModulesCommand"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "AuthenticationLayoutComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-layout/flow: {
+	"funcParams": {
+		"actionId": "ADD_LAYOUT_TEMPLATE",
+		"label": "Display Layout",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-layout/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-layout/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "layout",
+				"title": "Which layout to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "authentication-layout",
+						"contextVariables": []
+					},
+					{
+						"label": "add-button",
+						"contextVariables": []
+					},
+					{
+						"label": "edit-button",
+						"contextVariables": []
+					},
+					{
+						"label": "remove-button",
+						"contextVariables": []
+					},
+					{
+						"label": "card",
+						"contextVariables": []
+					},
+					{
+						"label": "toolbar",
+						"contextVariables": []
+					},
+					{
+						"label": "two-columns-grid",
+						"contextVariables": []
+					},
+					{
+						"label": "stepper",
+						"contextVariables": []
+					},
+					{
+						"label": "tabs",
+						"contextVariables": []
+					},
+					{
+						"label": "layouts",
+						"contextVariables": []
+					},
+					{
+						"label": "table",
+						"contextVariables": []
+					},
+					{
+						"label": "spinner",
+						"contextVariables": []
+					},
+					{
+						"label": "progress-bar",
+						"contextVariables": []
+					},
+					{
+						"label": "simple-no-data-template",
+						"contextVariables": []
+					},
+					{
+						"label": "image-no-data-template",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-layout",
+				"payload": {
+					"layoutTemplate": "layout.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Calling Command angular-component/templates/add-layout: {
+	"funcParams": {
+		"layoutTemplate": "authentication-layout"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/templates/add-layout"
+}
+[info] [CommandBus]: Dispatching command AddLayoutToTemplateCommand: {
+	"commandName": "AddLayoutToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component.html",
+		"className": "AuthenticationLayoutComponent",
+		"position": 1029,
+		"layoutTemplate": "authentication-layout"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command AddLayoutToTemplateCommand"
+}
+[info] [EventBus]: Broadcasting event TemplateAddedEvent: {
+	"type": "TemplateAddedEvent",
+	"payload": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event TemplateAddedEvent"
+}
+[info] [EventBus]: Broadcasted TemplateAddedEvent: {
+	"event": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted TemplateAddedEvent"
+}
+[info] [CommandBus]: Handled  AddLayoutToTemplateCommand: {
+	"commandName": "AddLayoutToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component.html",
+		"className": "AuthenticationLayoutComponent",
+		"position": 1029,
+		"layoutTemplate": "authentication-layout"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  AddLayoutToTemplateCommand"
+}
+[info] [CLI] Called Command angular-component/templates/add-layout: {
+	"message": "[CLI] Called Command angular-component/templates/add-layout",
+	"level": "info"
+}
+[info] [CommandBus]: Dispatching command ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/authentication-layout/authentication-layout.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ImportTemplateModulesCommand"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/register/register.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "RegisterComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-layout/flow: {
+	"funcParams": {
+		"actionId": "ADD_LAYOUT_TEMPLATE",
+		"label": "Display Layout",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-layout/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-layout/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "layout",
+				"title": "Which layout to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "authentication-layout",
+						"contextVariables": []
+					},
+					{
+						"label": "add-button",
+						"contextVariables": []
+					},
+					{
+						"label": "edit-button",
+						"contextVariables": []
+					},
+					{
+						"label": "remove-button",
+						"contextVariables": []
+					},
+					{
+						"label": "card",
+						"contextVariables": []
+					},
+					{
+						"label": "toolbar",
+						"contextVariables": []
+					},
+					{
+						"label": "two-columns-grid",
+						"contextVariables": []
+					},
+					{
+						"label": "stepper",
+						"contextVariables": []
+					},
+					{
+						"label": "tabs",
+						"contextVariables": []
+					},
+					{
+						"label": "layouts",
+						"contextVariables": []
+					},
+					{
+						"label": "table",
+						"contextVariables": []
+					},
+					{
+						"label": "spinner",
+						"contextVariables": []
+					},
+					{
+						"label": "progress-bar",
+						"contextVariables": []
+					},
+					{
+						"label": "simple-no-data-template",
+						"contextVariables": []
+					},
+					{
+						"label": "image-no-data-template",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-layout",
+				"payload": {
+					"layoutTemplate": "layout.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/register/register.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "RegisterComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-detail/flow: {
+	"funcParams": {
+		"actionId": "ADD_DETAIL_TEMPLATE",
+		"label": "Display Detail",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-detail/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-detail/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-detail/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "detail",
+				"title": "Which detail template to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "content",
+						"contextVariables": []
+					},
+					{
+						"label": "text",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			},
+			{
+				"contextId": "data",
+				"title": "What data to use?",
+				"type": "multi-option",
+				"options": [],
+				"extraOptions": [],
+				"property": "name",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-detail",
+				"payload": {
+					"propertyName": "data.name",
+					"detailTemplate": "detail.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-detail/flow"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/register/register.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "RegisterComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "UsersComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-detail/flow: {
+	"funcParams": {
+		"actionId": "ADD_DETAIL_TEMPLATE",
+		"label": "Display Detail",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-detail/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-detail/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-detail/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "detail",
+				"title": "Which detail template to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "content",
+						"contextVariables": []
+					},
+					{
+						"label": "text",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			},
+			{
+				"contextId": "data",
+				"title": "What data to use?",
+				"type": "multi-option",
+				"options": [
+					{
+						"name": "me$",
+						"type": "Observable<UserResponse>",
+						"isReadonly": true,
+						"typeProperties": [
+							"id",
+							"isCompleted",
+							"isVerified",
+							"phone",
+							"role"
+						]
+					},
+					{
+						"name": "refresh$",
+						"type": "Observable<void>",
+						"isReadonly": false,
+						"typeProperties": []
+					}
+				],
+				"extraOptions": [],
+				"property": "name",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-detail",
+				"payload": {
+					"propertyName": "data.name",
+					"detailTemplate": "detail.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-detail/flow"
+}
+[info] [CLI] Calling Command angular-component/templates/add-detail: {
+	"funcParams": {
+		"propertyName": "me$",
+		"detailTemplate": "text"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/templates/add-detail"
+}
+[info] [CommandBus]: Dispatching command AddDetailToTemplateCommand: {
+	"commandName": "AddDetailToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html",
+		"className": "UsersComponent",
+		"propertyName": "me$",
+		"position": 2129,
+		"detailTemplate": "text"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command AddDetailToTemplateCommand"
+}
+[info] [EventBus]: Broadcasting event TemplateAddedEvent: {
+	"type": "TemplateAddedEvent",
+	"payload": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event TemplateAddedEvent"
+}
+[info] [EventBus]: Broadcasted TemplateAddedEvent: {
+	"event": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted TemplateAddedEvent"
+}
+[info] [CommandBus]: Handled  AddDetailToTemplateCommand: {
+	"commandName": "AddDetailToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html",
+		"className": "UsersComponent",
+		"propertyName": "me$",
+		"position": 2129,
+		"detailTemplate": "text"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  AddDetailToTemplateCommand"
+}
+[info] [CLI] Called Command angular-component/templates/add-detail: {
+	"message": "[CLI] Called Command angular-component/templates/add-detail",
+	"level": "info"
+}
+[info] [CommandBus]: Dispatching command ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ImportTemplateModulesCommand"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "UsersComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-form/flow: {
+	"funcParams": {
+		"actionId": "ADD_FORM_TEMPLATE",
+		"label": "Display Form",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-form/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-form/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-form/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "form",
+				"title": "Which form template to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "mat-form",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			},
+			{
+				"contextId": "data",
+				"title": "What data to use?",
+				"type": "multi-option",
+				"options": [],
+				"extraOptions": [],
+				"property": "name",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-form",
+				"payload": {
+					"propertyName": "data.name",
+					"formTemplate": "form.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-form/flow"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "UsersComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-layout/flow: {
+	"funcParams": {
+		"actionId": "ADD_LAYOUT_TEMPLATE",
+		"label": "Display Layout",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-layout/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-layout/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "layout",
+				"title": "Which layout to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "authentication-layout",
+						"contextVariables": []
+					},
+					{
+						"label": "add-button",
+						"contextVariables": []
+					},
+					{
+						"label": "edit-button",
+						"contextVariables": []
+					},
+					{
+						"label": "remove-button",
+						"contextVariables": []
+					},
+					{
+						"label": "card",
+						"contextVariables": []
+					},
+					{
+						"label": "toolbar",
+						"contextVariables": []
+					},
+					{
+						"label": "two-columns-grid",
+						"contextVariables": []
+					},
+					{
+						"label": "stepper",
+						"contextVariables": []
+					},
+					{
+						"label": "tabs",
+						"contextVariables": []
+					},
+					{
+						"label": "layouts",
+						"contextVariables": []
+					},
+					{
+						"label": "table",
+						"contextVariables": []
+					},
+					{
+						"label": "spinner",
+						"contextVariables": []
+					},
+					{
+						"label": "progress-bar",
+						"contextVariables": []
+					},
+					{
+						"label": "simple-no-data-template",
+						"contextVariables": []
+					},
+					{
+						"label": "image-no-data-template",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-layout",
+				"payload": {
+					"layoutTemplate": "layout.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Calling Command angular-component/templates/add-layout: {
+	"funcParams": {
+		"layoutTemplate": "progress-bar"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/templates/add-layout"
+}
+[info] [CommandBus]: Dispatching command AddLayoutToTemplateCommand: {
+	"commandName": "AddLayoutToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html",
+		"className": "UsersComponent",
+		"position": 2129,
+		"layoutTemplate": "progress-bar"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command AddLayoutToTemplateCommand"
+}
+[info] [EventBus]: Broadcasting event TemplateAddedEvent: {
+	"type": "TemplateAddedEvent",
+	"payload": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event TemplateAddedEvent"
+}
+[info] [EventBus]: Broadcasted TemplateAddedEvent: {
+	"event": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted TemplateAddedEvent"
+}
+[info] [CommandBus]: Dispatching command ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  AddLayoutToTemplateCommand: {
+	"commandName": "AddLayoutToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html",
+		"className": "UsersComponent",
+		"position": 2129,
+		"layoutTemplate": "progress-bar"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  AddLayoutToTemplateCommand"
+}
+[info] [CLI] Called Command angular-component/templates/add-layout: {
+	"message": "[CLI] Called Command angular-component/templates/add-layout",
+	"level": "info"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "UsersComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-layout/flow: {
+	"funcParams": {
+		"actionId": "ADD_LAYOUT_TEMPLATE",
+		"label": "Display Layout",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-layout/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-layout/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "layout",
+				"title": "Which layout to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "authentication-layout",
+						"contextVariables": []
+					},
+					{
+						"label": "add-button",
+						"contextVariables": []
+					},
+					{
+						"label": "edit-button",
+						"contextVariables": []
+					},
+					{
+						"label": "remove-button",
+						"contextVariables": []
+					},
+					{
+						"label": "card",
+						"contextVariables": []
+					},
+					{
+						"label": "toolbar",
+						"contextVariables": []
+					},
+					{
+						"label": "two-columns-grid",
+						"contextVariables": []
+					},
+					{
+						"label": "stepper",
+						"contextVariables": []
+					},
+					{
+						"label": "tabs",
+						"contextVariables": []
+					},
+					{
+						"label": "layouts",
+						"contextVariables": []
+					},
+					{
+						"label": "table",
+						"contextVariables": []
+					},
+					{
+						"label": "spinner",
+						"contextVariables": []
+					},
+					{
+						"label": "progress-bar",
+						"contextVariables": []
+					},
+					{
+						"label": "simple-no-data-template",
+						"contextVariables": []
+					},
+					{
+						"label": "image-no-data-template",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-layout",
+				"payload": {
+					"layoutTemplate": "layout.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Calling Command angular-component/templates/add-layout: {
+	"funcParams": {
+		"layoutTemplate": "card"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/templates/add-layout"
+}
+[info] [CommandBus]: Dispatching command AddLayoutToTemplateCommand: {
+	"commandName": "AddLayoutToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html",
+		"className": "UsersComponent",
+		"position": 2129,
+		"layoutTemplate": "card"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command AddLayoutToTemplateCommand"
+}
+[info] [EventBus]: Broadcasting event TemplateAddedEvent: {
+	"type": "TemplateAddedEvent",
+	"payload": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event TemplateAddedEvent"
+}
+[info] [EventBus]: Broadcasted TemplateAddedEvent: {
+	"event": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted TemplateAddedEvent"
+}
+[info] [CommandBus]: Dispatching command ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  AddLayoutToTemplateCommand: {
+	"commandName": "AddLayoutToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html",
+		"className": "UsersComponent",
+		"position": 2129,
+		"layoutTemplate": "card"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  AddLayoutToTemplateCommand"
+}
+[info] [CLI] Called Command angular-component/templates/add-layout: {
+	"message": "[CLI] Called Command angular-component/templates/add-layout",
+	"level": "info"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "UsersComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-form/flow: {
+	"funcParams": {
+		"actionId": "ADD_FORM_TEMPLATE",
+		"label": "Display Form",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-form/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-form/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-form/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "form",
+				"title": "Which form template to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "mat-form",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			},
+			{
+				"contextId": "data",
+				"title": "What data to use?",
+				"type": "multi-option",
+				"options": [],
+				"extraOptions": [],
+				"property": "name",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-form",
+				"payload": {
+					"propertyName": "data.name",
+					"formTemplate": "form.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-form/flow"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "UsersComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-layout/flow: {
+	"funcParams": {
+		"actionId": "ADD_LAYOUT_TEMPLATE",
+		"label": "Display Layout",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-layout/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-layout/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "layout",
+				"title": "Which layout to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "authentication-layout",
+						"contextVariables": []
+					},
+					{
+						"label": "add-button",
+						"contextVariables": []
+					},
+					{
+						"label": "edit-button",
+						"contextVariables": []
+					},
+					{
+						"label": "remove-button",
+						"contextVariables": []
+					},
+					{
+						"label": "card",
+						"contextVariables": []
+					},
+					{
+						"label": "toolbar",
+						"contextVariables": []
+					},
+					{
+						"label": "two-columns-grid",
+						"contextVariables": []
+					},
+					{
+						"label": "stepper",
+						"contextVariables": []
+					},
+					{
+						"label": "tabs",
+						"contextVariables": []
+					},
+					{
+						"label": "layouts",
+						"contextVariables": []
+					},
+					{
+						"label": "table",
+						"contextVariables": []
+					},
+					{
+						"label": "spinner",
+						"contextVariables": []
+					},
+					{
+						"label": "progress-bar",
+						"contextVariables": []
+					},
+					{
+						"label": "simple-no-data-template",
+						"contextVariables": []
+					},
+					{
+						"label": "image-no-data-template",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-layout",
+				"payload": {
+					"layoutTemplate": "layout.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "UsersComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-layout/flow: {
+	"funcParams": {
+		"actionId": "ADD_LAYOUT_TEMPLATE",
+		"label": "Display Layout",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-layout/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-layout/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "layout",
+				"title": "Which layout to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "authentication-layout",
+						"contextVariables": []
+					},
+					{
+						"label": "add-button",
+						"contextVariables": []
+					},
+					{
+						"label": "edit-button",
+						"contextVariables": []
+					},
+					{
+						"label": "remove-button",
+						"contextVariables": []
+					},
+					{
+						"label": "card",
+						"contextVariables": []
+					},
+					{
+						"label": "toolbar",
+						"contextVariables": []
+					},
+					{
+						"label": "two-columns-grid",
+						"contextVariables": []
+					},
+					{
+						"label": "stepper",
+						"contextVariables": []
+					},
+					{
+						"label": "tabs",
+						"contextVariables": []
+					},
+					{
+						"label": "layouts",
+						"contextVariables": []
+					},
+					{
+						"label": "table",
+						"contextVariables": []
+					},
+					{
+						"label": "spinner",
+						"contextVariables": []
+					},
+					{
+						"label": "progress-bar",
+						"contextVariables": []
+					},
+					{
+						"label": "simple-no-data-template",
+						"contextVariables": []
+					},
+					{
+						"label": "image-no-data-template",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-layout",
+				"payload": {
+					"layoutTemplate": "layout.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Calling Command angular-component/templates/add-layout: {
+	"funcParams": {
+		"layoutTemplate": "card"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/templates/add-layout"
+}
+[info] [CommandBus]: Dispatching command AddLayoutToTemplateCommand: {
+	"commandName": "AddLayoutToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html",
+		"className": "UsersComponent",
+		"position": 2129,
+		"layoutTemplate": "card"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command AddLayoutToTemplateCommand"
+}
+[info] [EventBus]: Broadcasting event TemplateAddedEvent: {
+	"type": "TemplateAddedEvent",
+	"payload": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event TemplateAddedEvent"
+}
+[info] [EventBus]: Broadcasted TemplateAddedEvent: {
+	"event": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted TemplateAddedEvent"
+}
+[info] [CommandBus]: Handled  AddLayoutToTemplateCommand: {
+	"commandName": "AddLayoutToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html",
+		"className": "UsersComponent",
+		"position": 2129,
+		"layoutTemplate": "card"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  AddLayoutToTemplateCommand"
+}
+[info] [CLI] Called Command angular-component/templates/add-layout: {
+	"message": "[CLI] Called Command angular-component/templates/add-layout",
+	"level": "info"
+}
+[info] [CommandBus]: Dispatching command ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ImportTemplateModulesCommand"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "UsersComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-detail/flow: {
+	"funcParams": {
+		"actionId": "ADD_DETAIL_TEMPLATE",
+		"label": "Display Detail",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-detail/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-detail/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-detail/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "detail",
+				"title": "Which detail template to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "content",
+						"contextVariables": []
+					},
+					{
+						"label": "text",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			},
+			{
+				"contextId": "data",
+				"title": "What data to use?",
+				"type": "multi-option",
+				"options": [
+					{
+						"name": "me$",
+						"type": "Observable<UserResponse>",
+						"isReadonly": true,
+						"typeProperties": [
+							"id",
+							"isCompleted",
+							"isVerified",
+							"phone",
+							"role"
+						]
+					},
+					{
+						"name": "refresh$",
+						"type": "Observable<void>",
+						"isReadonly": false,
+						"typeProperties": []
+					}
+				],
+				"extraOptions": [],
+				"property": "name",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-detail",
+				"payload": {
+					"propertyName": "data.name",
+					"detailTemplate": "detail.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-detail/flow"
+}
+[info] [CLI] Calling Command angular-component/templates/add-detail: {
+	"funcParams": {
+		"propertyName": "me$",
+		"detailTemplate": "content"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/templates/add-detail"
+}
+[info] [CommandBus]: Dispatching command AddDetailToTemplateCommand: {
+	"commandName": "AddDetailToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html",
+		"className": "UsersComponent",
+		"propertyName": "me$",
+		"position": 2129,
+		"detailTemplate": "content"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command AddDetailToTemplateCommand"
+}
+[info] [EventBus]: Broadcasting event TemplateAddedEvent: {
+	"type": "TemplateAddedEvent",
+	"payload": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event TemplateAddedEvent"
+}
+[info] [EventBus]: Broadcasted TemplateAddedEvent: {
+	"event": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted TemplateAddedEvent"
+}
+[info] [CommandBus]: Handled  AddDetailToTemplateCommand: {
+	"commandName": "AddDetailToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html",
+		"className": "UsersComponent",
+		"propertyName": "me$",
+		"position": 2129,
+		"detailTemplate": "content"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  AddDetailToTemplateCommand"
+}
+[info] [CLI] Called Command angular-component/templates/add-detail: {
+	"message": "[CLI] Called Command angular-component/templates/add-detail",
+	"level": "info"
+}
+[info] [CommandBus]: Dispatching command ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ImportTemplateModulesCommand"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "CompleteAccountComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-form/flow: {
+	"funcParams": {
+		"actionId": "ADD_FORM_TEMPLATE",
+		"label": "Display Form",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-form/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-form/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-form/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "form",
+				"title": "Which form template to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "mat-form",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			},
+			{
+				"contextId": "data",
+				"title": "What data to use?",
+				"type": "multi-option",
+				"options": [
+					{
+						"name": "completeAccountForm",
+						"type": "FormGroup<any>",
+						"isReadonly": true,
+						"typeProperties": []
+					}
+				],
+				"extraOptions": [],
+				"property": "name",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-form",
+				"payload": {
+					"propertyName": "data.name",
+					"formTemplate": "form.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-form/flow"
+}
+[info] [CLI] Calling Command angular-component/templates/add-form: {
+	"funcParams": {
+		"propertyName": "completeAccountForm",
+		"formTemplate": "mat-form"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/templates/add-form"
+}
+[info] [CommandBus]: Dispatching command AddFormToTemplateCommand: {
+	"commandName": "AddFormToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.html",
+		"className": "CompleteAccountComponent",
+		"propertyName": "completeAccountForm",
+		"position": 1342,
+		"formTemplate": "mat-form"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command AddFormToTemplateCommand"
+}
+[info] [EventBus]: Broadcasting event TemplateAddedEvent: {
+	"type": "TemplateAddedEvent",
+	"payload": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event TemplateAddedEvent"
+}
+[info] [EventBus]: Broadcasted TemplateAddedEvent: {
+	"event": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted TemplateAddedEvent"
+}
+[info] [CommandBus]: Handled  AddFormToTemplateCommand: {
+	"commandName": "AddFormToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.html",
+		"className": "CompleteAccountComponent",
+		"propertyName": "completeAccountForm",
+		"position": 1342,
+		"formTemplate": "mat-form"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  AddFormToTemplateCommand"
+}
+[info] [CLI] Called Command angular-component/templates/add-form: {
+	"message": "[CLI] Called Command angular-component/templates/add-form",
+	"level": "info"
+}
+[info] [CommandBus]: Dispatching command ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ImportTemplateModulesCommand"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "CompleteAccountComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-form/flow: {
+	"funcParams": {
+		"actionId": "ADD_FORM_TEMPLATE",
+		"label": "Display Form",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-form/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-form/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-form/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "form",
+				"title": "Which form template to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "mat-form",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			},
+			{
+				"contextId": "data",
+				"title": "What data to use?",
+				"type": "multi-option",
+				"options": [
+					{
+						"name": "completeAccountForm",
+						"type": "FormGroup<any>",
+						"isReadonly": true,
+						"typeProperties": []
+					}
+				],
+				"extraOptions": [],
+				"property": "name",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-form",
+				"payload": {
+					"propertyName": "data.name",
+					"formTemplate": "form.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-form/flow"
+}
+[info] [CLI] Calling Command angular-component/templates/add-form: {
+	"funcParams": {
+		"propertyName": "completeAccountForm",
+		"formTemplate": "mat-form"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/templates/add-form"
+}
+[info] [CommandBus]: Dispatching command AddFormToTemplateCommand: {
+	"commandName": "AddFormToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.html",
+		"className": "CompleteAccountComponent",
+		"propertyName": "completeAccountForm",
+		"position": 1342,
+		"formTemplate": "mat-form"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command AddFormToTemplateCommand"
+}
+[info] [EventBus]: Broadcasting event TemplateAddedEvent: {
+	"type": "TemplateAddedEvent",
+	"payload": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event TemplateAddedEvent"
+}
+[info] [EventBus]: Broadcasted TemplateAddedEvent: {
+	"event": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted TemplateAddedEvent"
+}
+[info] [CommandBus]: Handled  AddFormToTemplateCommand: {
+	"commandName": "AddFormToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.html",
+		"className": "CompleteAccountComponent",
+		"propertyName": "completeAccountForm",
+		"position": 1342,
+		"formTemplate": "mat-form"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  AddFormToTemplateCommand"
+}
+[info] [CLI] Called Command angular-component/templates/add-form: {
+	"message": "[CLI] Called Command angular-component/templates/add-form",
+	"level": "info"
+}
+[info] [CommandBus]: Dispatching command ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ImportTemplateModulesCommand"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "CompleteAccountComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "CompleteAccountComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-layout/flow: {
+	"funcParams": {
+		"actionId": "ADD_LAYOUT_TEMPLATE",
+		"label": "Display Layout",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-layout/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-layout/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "layout",
+				"title": "Which layout to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "authentication-layout",
+						"contextVariables": []
+					},
+					{
+						"label": "add-button",
+						"contextVariables": []
+					},
+					{
+						"label": "edit-button",
+						"contextVariables": []
+					},
+					{
+						"label": "remove-button",
+						"contextVariables": []
+					},
+					{
+						"label": "card",
+						"contextVariables": []
+					},
+					{
+						"label": "toolbar",
+						"contextVariables": []
+					},
+					{
+						"label": "two-columns-grid",
+						"contextVariables": []
+					},
+					{
+						"label": "stepper",
+						"contextVariables": []
+					},
+					{
+						"label": "tabs",
+						"contextVariables": []
+					},
+					{
+						"label": "layouts",
+						"contextVariables": []
+					},
+					{
+						"label": "table",
+						"contextVariables": []
+					},
+					{
+						"label": "spinner",
+						"contextVariables": []
+					},
+					{
+						"label": "progress-bar",
+						"contextVariables": []
+					},
+					{
+						"label": "simple-no-data-template",
+						"contextVariables": []
+					},
+					{
+						"label": "image-no-data-template",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-layout",
+				"payload": {
+					"layoutTemplate": "layout.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "CompleteAccountComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-form/flow: {
+	"funcParams": {
+		"actionId": "ADD_FORM_TEMPLATE",
+		"label": "Display Form",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-form/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-form/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-form/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "form",
+				"title": "Which form template to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "form",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			},
+			{
+				"contextId": "data",
+				"title": "What data to use?",
+				"type": "multi-option",
+				"options": [
+					{
+						"name": "completeAccountForm",
+						"type": "FormGroup<any>",
+						"isReadonly": true,
+						"typeProperties": []
+					}
+				],
+				"extraOptions": [],
+				"property": "name",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-form",
+				"payload": {
+					"propertyName": "data.name",
+					"formTemplate": "form.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-form/flow"
+}
+[info] [CLI] Calling Command angular-component/templates/add-form: {
+	"funcParams": {
+		"propertyName": "completeAccountForm",
+		"formTemplate": "form"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/templates/add-form"
+}
+[info] [CommandBus]: Dispatching command AddFormToTemplateCommand: {
+	"commandName": "AddFormToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.html",
+		"className": "CompleteAccountComponent",
+		"propertyName": "completeAccountForm",
+		"position": 1342,
+		"formTemplate": "form"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command AddFormToTemplateCommand"
+}
+[info] [EventBus]: Broadcasting event TemplateAddedEvent: {
+	"type": "TemplateAddedEvent",
+	"payload": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event TemplateAddedEvent"
+}
+[info] [EventBus]: Broadcasted TemplateAddedEvent: {
+	"event": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted TemplateAddedEvent"
+}
+[info] [CommandBus]: Handled  AddFormToTemplateCommand: {
+	"commandName": "AddFormToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component.html",
+		"className": "CompleteAccountComponent",
+		"propertyName": "completeAccountForm",
+		"position": 1342,
+		"formTemplate": "form"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  AddFormToTemplateCommand"
+}
+[info] [CLI] Called Command angular-component/templates/add-form: {
+	"message": "[CLI] Called Command angular-component/templates/add-form",
+	"level": "info"
+}
+[info] [CommandBus]: Dispatching command ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/complete-account/complete-account.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ImportTemplateModulesCommand"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "UsersComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-list/flow: {
+	"funcParams": {
+		"actionId": "ADD_LIST_TEMPLATE",
+		"label": "Display List",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-list/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-list/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-list/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "list",
+				"title": "Which list template to show?",
+				"type": "multi-option",
+				"options": [],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			},
+			{
+				"contextId": "data",
+				"title": "What data to use?",
+				"type": "multi-option",
+				"options": [
+					{
+						"name": "titles$",
+						"type": "Observable<string[]>",
+						"isReadonly": false,
+						"typeProperties": []
+					},
+					{
+						"name": "users$",
+						"type": "Observable<UserModel[]>",
+						"isReadonly": true,
+						"typeProperties": [
+							"id",
+							"isVerified",
+							"phone"
+						]
+					}
+				],
+				"extraOptions": [],
+				"property": "name",
+				"canBeEmpty": false
+			},
+			{
+				"contextId": "detail",
+				"title": "Which template to use for details?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "content",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-list",
+				"payload": {
+					"propertyName": "data.name",
+					"listTemplate": "list.label",
+					"detailTemplate": "detail.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-list/flow"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "UsersComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_LIST_TEMPLATE",
+				"label": "Display List",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-list/flow"
+			},
+			{
+				"actionId": "ADD_FORM_TEMPLATE",
+				"label": "Display Form",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-form/flow"
+			},
+			{
+				"actionId": "ADD_DETAIL_TEMPLATE",
+				"label": "Display Detail",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-detail/flow"
+			},
+			{
+				"actionId": "ADD_LAYOUT_TEMPLATE",
+				"label": "Display Layout",
+				"callPath": [],
+				"flowUrl": "angular-component/templates/add-layout/flow"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [CLI] Calling Query angular-component/templates/add-layout/flow: {
+	"funcParams": {
+		"actionId": "ADD_LAYOUT_TEMPLATE",
+		"label": "Display Layout",
+		"callPath": [],
+		"flowUrl": "angular-component/templates/add-layout/flow"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Called Query angular-component/templates/add-layout/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "layout",
+				"title": "Which layout to show?",
+				"type": "multi-option",
+				"options": [
+					{
+						"label": "authentication-layout",
+						"contextVariables": []
+					},
+					{
+						"label": "main-wrapper",
+						"contextVariables": []
+					},
+					{
+						"label": "card-body",
+						"contextVariables": []
+					},
+					{
+						"label": "stretch-card",
+						"contextVariables": []
+					},
+					{
+						"label": "card-title",
+						"contextVariables": []
+					},
+					{
+						"label": "col-center",
+						"contextVariables": []
+					},
+					{
+						"label": "table",
+						"contextVariables": []
+					},
+					{
+						"label": "button",
+						"contextVariables": []
+					},
+					{
+						"label": "add-button",
+						"contextVariables": []
+					},
+					{
+						"label": "edit-button",
+						"contextVariables": []
+					},
+					{
+						"label": "remove-button",
+						"contextVariables": []
+					},
+					{
+						"label": "card",
+						"contextVariables": []
+					},
+					{
+						"label": "toolbar",
+						"contextVariables": []
+					},
+					{
+						"label": "two-columns-grid",
+						"contextVariables": []
+					},
+					{
+						"label": "stepper",
+						"contextVariables": []
+					},
+					{
+						"label": "tabs",
+						"contextVariables": []
+					},
+					{
+						"label": "layouts",
+						"contextVariables": []
+					},
+					{
+						"label": "spinner",
+						"contextVariables": []
+					},
+					{
+						"label": "progress-bar",
+						"contextVariables": []
+					},
+					{
+						"label": "simple-no-data-template",
+						"contextVariables": []
+					},
+					{
+						"label": "image-no-data-template",
+						"contextVariables": []
+					}
+				],
+				"extraOptions": [],
+				"property": "label",
+				"canBeEmpty": false
+			}
+		],
+		"request": {
+			"config": {
+				"url": "angular-component/templates/add-layout",
+				"payload": {
+					"layoutTemplate": "layout.label"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/add-layout/flow"
+}
+[info] [CLI] Calling Command angular-component/templates/add-layout: {
+	"funcParams": {
+		"layoutTemplate": "button"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/templates/add-layout"
+}
+[info] [CommandBus]: Dispatching command AddLayoutToTemplateCommand: {
+	"commandName": "AddLayoutToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html",
+		"className": "UsersComponent",
+		"position": 2070,
+		"layoutTemplate": "button"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command AddLayoutToTemplateCommand"
+}
+[info] [EventBus]: Broadcasting event TemplateAddedEvent: {
+	"type": "TemplateAddedEvent",
+	"payload": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event TemplateAddedEvent"
+}
+[info] [EventBus]: Broadcasted TemplateAddedEvent: {
+	"event": {
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted TemplateAddedEvent"
+}
+[info] [CommandBus]: Handled  AddLayoutToTemplateCommand: {
+	"commandName": "AddLayoutToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI",
+		"componentTs": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.ts",
+		"componentHtml": "/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component.html",
+		"className": "UsersComponent",
+		"position": 2070,
+		"layoutTemplate": "button"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  AddLayoutToTemplateCommand"
+}
+[info] [CLI] Called Command angular-component/templates/add-layout: {
+	"message": "[CLI] Called Command angular-component/templates/add-layout",
+	"level": "info"
+}
+[info] [CommandBus]: Dispatching command ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"/Users/skulimowskim/Desktop/Programming/Lowgular/Projekty/CRM-NobleUI/src/app/components/users/users.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ImportTemplateModulesCommand"
+}

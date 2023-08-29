@@ -3,7 +3,7 @@ import {
   Component,
   ViewEncapsulation,
 } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { UserResponse } from '../../responses/user.response';
@@ -18,6 +18,7 @@ import { UserService } from '../../services/user.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UsersComponent {
+  public titles$: Observable<string[]> = of(['#', 'PHONE', 'STATUS', 'ACTION']);
   readonly me$: Observable<UserResponse | null> = this._userService
     .getMe()
     .pipe(
